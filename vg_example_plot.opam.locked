@@ -1,0 +1,74 @@
+opam-version: "2.0"
+name: "vg_example_plot"
+version: "1.0.0"
+synopsis: "An example plot using brr and vg"
+maintainer: "Ryan M. Moore"
+authors: "Ryan M. Moore"
+license: "MIT"
+homepage: "https://github.com/mooreryan/vg_example_plot"
+doc: "https://github.com/mooreryan/vg_example_plot"
+bug-reports: "https://github.com/mooreryan/vg_example_plot/issues"
+depends: [
+  "astring" {= "0.8.5" & with-doc}
+  "base-bigarray" {= "base"}
+  "base-threads" {= "base"}
+  "base-unix" {= "base"}
+  "brr" {= "0.0.6"}
+  "cairo2" {= "0.6.4"}
+  "camlp-streams" {= "5.0.1" & with-doc}
+  "cmdliner" {= "1.2.0"}
+  "conf-cairo" {= "1"}
+  "conf-pkg-config" {= "3"}
+  "cppo" {= "1.6.9"}
+  "csexp" {= "1.5.2"}
+  "dune" {= "3.10.0"}
+  "dune-configurator" {= "3.10.0"}
+  "fmt" {= "0.9.0" & with-doc}
+  "fpath" {= "0.7.3" & with-doc}
+  "gen" {= "1.1"}
+  "gg" {= "1.0.0"}
+  "iter" {= "1.7"}
+  "js_of_ocaml-compiler" {= "5.4.0"}
+  "js_of_ocaml-toplevel" {= "5.4.0"}
+  "menhir" {= "20230608"}
+  "menhirLib" {= "20230608"}
+  "menhirSdk" {= "20230608"}
+  "ocaml" {= "4.14.1"}
+  "ocaml-base-compiler" {= "4.14.1"}
+  "ocaml-compiler-libs" {= "v0.12.4"}
+  "ocaml-config" {= "2"}
+  "ocaml-options-vanilla" {= "1"}
+  "ocamlbuild" {= "0.14.2"}
+  "ocamlfind" {= "1.9.6"}
+  "odoc" {= "2.2.1" & with-doc}
+  "odoc-parser" {= "2.0.0" & with-doc}
+  "otfm" {= "0.4.0"}
+  "ppx_derivers" {= "1.2.1"}
+  "ppxlib" {= "0.30.0"}
+  "re" {= "1.11.0" & with-doc}
+  "result" {= "1.5" & with-doc}
+  "sedlex" {= "3.2"}
+  "seq" {= "base"}
+  "sexplib0" {= "v0.16.0"}
+  "stdlib-shims" {= "0.3.0"}
+  "topkg" {= "1.0.7"}
+  "tyxml" {= "4.5.0" & with-doc}
+  "uutf" {= "1.0.3"}
+  "vg" {= "0.9.4"}
+  "yojson" {= "2.1.0"}
+]
+build: [
+  ["dune" "subst"] {dev}
+  [
+    "dune"
+    "build"
+    "-p"
+    name
+    "-j"
+    jobs
+    "@install"
+    "@runtest" {with-test}
+    "@doc" {with-doc}
+  ]
+]
+pin-depends: ["vg.0.9.4" "git+file:///home/ryan/software/vg#master"]

@@ -1,0 +1,7 @@
+(rule
+ (mode
+  (promote (until-clean)))
+ (target main.js)
+ (deps ../src/main.bc.js)
+ (action
+  (run cp %{deps} %{target})))

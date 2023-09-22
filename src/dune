@@ -1,0 +1,9 @@
+(executable
+ (name main)
+ (modes js)
+ (libraries brr gg iter vg vg.htmlc))
+
+; (env
+;  (dev
+;   (flags
+;    (:standard -w -26-27-32))))
