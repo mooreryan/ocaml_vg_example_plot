@@ -19,3 +19,7 @@ opam install . --deps-only --locked
 ```
 
 In particular, this will ensure you have the pinned version of `vg`, which is needed to work with `brr` rather than the jsoo library.
+
+## JS bundle size
+
+The generated JavaScript is 125KB (43KB gzipped). Not too bad, all things considered.
