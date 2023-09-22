@@ -2,7 +2,7 @@
 
 A tiny example plot using OCaml, [Js_of_ocaml](http://ocsigen.org/js_of_ocaml/latest/manual/overview), [Brr](https://erratique.ch/software/brr), and [Vg](https://erratique.ch/software/vg).
 
-Check it out [here](https://mooreryan.github.io/vg_example_plot/)! You can click on the plot to add dots, remove them, and save your image!
+Check it out [here](https://mooreryan.github.io/ocaml_vg_example_plot/). You can click on the plot to add dots, remove them, and save your image!
 
 ## Building the site
 
