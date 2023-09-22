@@ -221,10 +221,8 @@ module Plot_elements = struct
     let circ = P.empty |> P.circle center r in
     I.cut circ gray
 
-  (* The grid has major and minor grid lines in both x and y axes. *)
-  let grid =
-    [grid `Minor `X; grid `Minor `Y; grid `Major `X; grid `Major `Y]
-    |> List.fold_left I.blend I.void
+  (* Minor grid is tough to see when plot is small, so leave it off for now. *)
+  let grid = [grid `Major `X; grid `Major `Y] |> List.fold_left I.blend I.void
 
   let axes =
     let area = `O {P.o with P.width= Conf.axis_width} in
