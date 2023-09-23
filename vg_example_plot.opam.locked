@@ -71,4 +71,4 @@ build: [
     "@doc" {with-doc}
   ]
 ]
-pin-depends: ["vg.0.9.4" "git+file:///home/ryan/software/vg#master"]
+pin-depends: ["vg.0.9.4" "git+https://github.com/dbuenzli/vg#278e473"]
